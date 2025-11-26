@@ -8,6 +8,16 @@ gem "propshaft"
 gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 
+gem "sidekiq"
+# background worker
+gem "sidekiq-cron"
+# schedule background worker every minute
+gem "feedjira"
+# parse RSS/Atom feeds
+gem "httparty"
+# HTTP requests
+gem "faraday"
+# HTTP requests
 gem "puma", ">= 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -50,6 +60,9 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "dotenv-rails"
+  # local .env management for credentials
 end
 
 group :development do
